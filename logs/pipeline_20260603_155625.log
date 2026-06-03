@@ -1,0 +1,3 @@
+2026-06-03 15:56:47,566 [ERROR] audit_engine.py:254 -- Audit failed for aws/aws-cli: KIMI_API_KEY not set!
+2026-06-03 15:56:47,569 [INFO] reporter.py:177 -- Report written: C:\Users\parve\project_v2_extracted\project_v2\reports\individual\aws_aws-cli.md
+2026-06-03 15:56:47,570 [INFO] reporter.py:208 -- JSON report written: C:\Users\parve\project_v2_extracted\project_v2\reports\individual\aws_aws-cli.json

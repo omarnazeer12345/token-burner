@@ -1,0 +1,17 @@
+{
+  "audit_timestamp": "2026-06-03T10:35:56Z",
+  "files_analyzed": 50,
+  "findings": [],
+  "repo": "aws/aws-cli",
+  "repo_id": "7fd547eab53a",
+  "summary": {
+    "critical_count": 0,
+    "duration_seconds": 268.59,
+    "high_count": 0,
+    "info_count": 0,
+    "low_count": 0,
+    "medium_count": 0,
+    "total_files": 50,
+    "total_findings": 0
+  }
+}

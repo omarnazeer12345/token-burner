@@ -1,0 +1,560 @@
+identifier,asset_type,instruction,eligible_for_bounty,eligible_for_submission,availability_requirement,confidentiality_requirement,integrity_requirement,max_severity,system_tags,created_at,updated_at
+Amazon CodeWhisperer,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS X-Ray,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+*.people.aws.dev,OTHER,"",false,true,none,none,low,low,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+Amazon GameSparks,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS WorkDocs,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS Control Tower,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Bottlerocket,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+Amazon Comprehend Medical,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Route 53,OTHER,"",false,true,,,,critical,,2025-09-11 19:10:19 UTC,2025-09-11 19:10:19 UTC
+*.agscollab.com,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+https://github.com/amazonlinux/amazon-linux-2023,SOURCE_CODE,"",false,true,,,,critical,,2024-08-14 13:44:34 UTC,2024-08-14 13:44:34 UTC
+Amazon Location,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Mainframe Modernization Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS End User Messaging Social,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Mobile SDK for iOS,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon VPC Lattice,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon GuardDuty,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon CodeCatalyst,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS SDK for Ruby,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Elemental MediaPackage,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Aurora,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+Open Distro,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:34 UTC,2024-09-05 12:34:34 UTC
+AWS Support Plans,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS IoT Wireless,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon RHEL Knowledgebase Portal,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS PrivateLink,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS CodeConnections,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Payment Cryptography,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Kinesis Data Streams,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS User Subscriptions,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Application Transformation Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Kiro,OTHER,"",false,true,not_defined,not_defined,not_defined,critical,,2025-07-16 20:45:37 UTC,2025-07-16 20:45:37 UTC
+Vector Engine for Amazon OpenSearch Serverless,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:35 UTC,2024-09-05 12:34:35 UTC
+AWS Identity and Access Management Access Analyzer,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+Amazon WorkSpaces Core,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://github.com/aws/aws-sdk,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon Redshift Serverless,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon DynamoDB,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+PartiQL,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:35 UTC,2024-09-05 12:34:35 UTC
+AWS IoT Events,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Lambda,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+https://github.com/aws/amazon-ecs-cli,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS ParallelCluster,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Inspector,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Batch,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon OpenSearch,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+1023499075,APPLE_STORE_APP_ID,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+Amazon WorkDocs,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Macie,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Cloud WAN,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon QuickSight,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Key Management Service (AWS KMS),OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+https://github.com/aws-samples,URL,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Backint Agent,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS Site-to-Site VPN,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Toolkit for Visual Studio Code,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+https://*.mturk.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon Simple Queue Service (Amazon SQS),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Elastic Load Balancing (ELB),OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+https://*.aws/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon Cloud Directory,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Timestream,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://github.com/aws/amazon-vpc-cni-k8s,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS CloudFormation,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon Route 53 Application Recovery Controller,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Billing and Cost Management,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+CloudEndure Migration,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+AWS Security Hub CSPM,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+api-user.e2ro.com/*,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+*.agslauncher.com,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS Global Accelerator,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS CloudShell,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Babelfish,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:58 UTC,2024-09-05 12:31:58 UTC
+https://*.awsapps.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon Mobile Analytics,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Billing,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+*.tsologic.com,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+https://*.awsevents.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon CloudWatch Logs,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS SDK for SAP ABAP,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon CloudFront,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS CloudHSM,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Deep Learning AMIs (DLAMI),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Q Developer,OTHER,"",false,true,,,,critical,,2025-07-09 13:37:02 UTC,2025-07-09 13:37:02 UTC
+Amazon Cognito Identity,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Interactive Video Service Chat,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Data Firehose,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:58 UTC,2024-09-05 12:30:58 UTC
+Amazon FSx for Lustre,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS OpsWorks for Chef Automate,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS SDK for .NET,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+https://*.amazonzocalo.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Private 5G,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+"Services, Apps, Mobile",OTHER,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+Amazon Elastic Container Service (Amazon ECS),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Managed Service for Apache Flink,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Price List,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Network Firewall,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+AWS Management Portal for vCenter,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Parallel Computing Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Service Catalog,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+https://github.com/kubernetes-sigs/cluster-api-provider-aws,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Marketplace,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Cloud9,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+https://*.amazonworkdocs.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+OpenSearch,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:35 UTC,2024-09-05 12:34:35 UTC
+Amazon SageMaker,OTHER,"",false,true,,,,critical,,2025-07-09 13:36:31 UTC,2025-07-09 13:36:31 UTC
+Amazon Neptune Analytics,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS WorkMail,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+Amazon FSx,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Lightsail,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Mainframe Modernization,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Partner Central Selling,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Performance Insights,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Supply Chain,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Network Manager,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Pinpoint,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Elastic Container Registry,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon GuardDuty ECS Runtime Monitoring,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon RDS,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Augmented AI (Amazon A2I),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+Amazon Macie Classic,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon DevPay,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Sequoia,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:35 UTC,2024-09-05 12:34:35 UTC
+www.awseducate.com,URL,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Service Quotas,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:35 UTC,2024-09-05 12:34:35 UTC
+Anything not in scope,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+AWS Deep Learning Containers,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Application Auto Scaling,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS IoT Analytics,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS Certificate Manager (ACM),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS Cloud Development Kit (AWS CDK),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS App Runner,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+*.lostark.games.aws.dev,WILDCARD,"",false,true,,,,high,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS SDK for C++,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS AppFabric,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS Identity and Access Management (IAM),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS Directory Service,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Fault Injection Service,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Q Developer Agent,OTHER,"",false,true,,,,critical,,2025-07-09 13:37:02 UTC,2025-07-09 13:37:02 UTC
+AWS DeepComposer,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Cloud Shell,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS AppSync,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon Interactive Video Service (Amazon IVS),OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon Simple Notification Service (Amazon SNS),OTHER,"",false,true,,,,critical,,2025-11-21 13:08:56 UTC,2025-11-21 13:08:56 UTC
+AWS Shield,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Data Lifecycle Managers,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon EventBridge,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Pricing Calculator,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Security Incident Response,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Simple Email Service (Amazon SES),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS IoT 1-Click,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+Amazon EC2 Instance Connect,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Identity Store,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Glue,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Lex,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Transform,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS CodeStar,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Cost Optimization Hub,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS HealthLake,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+Amazon EC2,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://github.com/aws/aws-cli,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon DocumentDB (with MongoDB compatibility),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Key Management Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon OpenSearch Serverless,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:01 UTC,2024-09-05 12:31:01 UTC
+Amazon Location Service,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Alexa for Business,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:17 UTC,2024-09-05 12:31:17 UTC
+AWS CloudFront,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS IoT Core,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS GuardDuty,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon FSx for Windows File Server,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Managed Streaming for Apache Kafka,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://*.awspartner.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS License Manager,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Thinkbox Deadline,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Storage Gateway,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Toolkit for Eclipse,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Support App in Slack,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Mobile SDK for Unity,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Elastic Disaster Recovery,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Distro for OpenTelemetry,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS IoT,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Compute Optimizer,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon WorkLink,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Elemental MediaConnect,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Elemental MediaTailor,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Snowball,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon MQ,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon Elastic Compute Cloud (Amazon EC2),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+*.newworld.com,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+Amazon Fraud Detector,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Monitron,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS SDK for JavaScript,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon CloudWatch Internet Monitor,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS Snow Family,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Chime,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS IoT Core for LoRaWAN,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS-Owned and Operated Thick Clients,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+Amazon ElastiCache Serverless,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Polly,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Braket,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+Amazon Sumerian,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon SNS,OTHER,"",false,true,,,,critical,,2025-11-21 13:08:56 UTC,2025-11-21 13:08:56 UTC
+Amazon WorkSpaces Secure Browser,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon API Gateway,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+Amazon EC2 Image Builder,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+node.e2ro.com/*,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Support,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Wickr,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Q in QuickSight,OTHER,"",false,true,,,,critical,,2025-07-09 13:37:02 UTC,2025-07-09 13:37:02 UTC
+AWS Transfer Family,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Fargate,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Artifact,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS Redshift,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS IoT Greengrass,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS CodeArtifact,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Trusted Advisor,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Relational Database Service (RDS),OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Q Business,OTHER,"",false,true,,,,critical,,2025-07-09 13:37:02 UTC,2025-07-09 13:37:02 UTC
+AWS re:Post Private,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon CodeGuru Reviewer,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+https://github.com/aws/aws-cdk,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Console Mobile App,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS SDK for PHP,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+https://github.com/kubernetes-sigs/aws-encryption-provider,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon SimpleDB,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Deadline Cloud,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Toolkit for Visual Studio,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Partner central account management,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Elastic Block Store,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Quantum Ledger Database (Amazon QLDB),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Data Exchange,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+forums.newworld.com,URL,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+AWS Systems Manager,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Elemental MediaStore,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Glue DataBrew,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Support Recommendations,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Simple Storage Service (Amazon S3),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+*.lambda-url.*.on.aws,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS Config,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS DataSync,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+https://github.com/amazon-research/,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS HealthOmics,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS Cloudfront2,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Forecast,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Toolkit for JetBrains,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Q in Supply Chain,OTHER,"",false,true,,,,critical,,2025-07-09 13:37:02 UTC,2025-07-09 13:37:02 UTC
+AWS SimSpace Weaver,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Telco Network Builder,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Data Lifecycle Manager,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Secrets Manager,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon SES,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Health APIs and Notifications,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS service providing managed private networks,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Shield Advanced,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Tools for PowerShell,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Elemental MediaLive,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Honeycode,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Migration Hub,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon EKS Auth,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Migration Evaluator,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:34 UTC,2024-09-05 12:34:34 UTC
+AWS SDK for Python (Boto3),OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Mobile Hub,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Resource Access Manager (RAM),OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Database Migration Service (AWS DMS),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Ground Station,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon SQS,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Microservice Extractor for .NET,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon S3 Glacier,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon CloudWatch Evidently,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS Customer Verification Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Signer,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS App2Container,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS Launch Wizard,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon FinSpace,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Message Delivery Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://github.com/kubernetes-sigs/aws-efs-csi-driver,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS B2B Data Interchange,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS IAM Access Analyzer,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS CodeCommit,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS AppConfig,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS - Cloud Shell,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Cloudfront,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS IoT Device Management,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Security Token Service (AWS STS),OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Rekognition,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Lookout for Metrics,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon Cognito Sync,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Lookout for Vision,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+https://*.amazoncognito.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+https://*.aws.training/*,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Application Discovery Service,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon DevOps Guru,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Bedrock,OTHER,"",false,true,not_defined,not_defined,not_defined,critical,,2024-09-04 21:50:12 UTC,2025-12-02 19:22:44 UTC
+Blazegraph,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+Amazon ElastiCache,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS IoT SiteWise,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Consolidated Billing,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Blockchain Templates,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon Managed Workflows for Apache Airflow,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon EMR Serverless,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Clean Rooms,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Step Functions,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Alexa For Business ,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+AWS Directory Service for Microsoft Active Directory,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon FSx for NetApp ONTAP,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Cost Explorer Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Organizations,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Managed Blockchain,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon WorkSpaces Application Manager (Amazon WAM),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS GovCloud (US),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Elastic Kubernetes Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Firewall Manager,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS SDK for Go,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Managed Service for Prometheus,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Local Zones,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+NICE DCV,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:34 UTC,2024-09-05 12:34:34 UTC
+AWS Directory Service Data,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Health,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS IAM Identity Center,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS IoT Things Graph,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Elastic File System (Amazon EFS),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Resilience Hub,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Diagnostic tools,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Ground Station,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+Quivela,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:35 UTC,2024-09-05 12:34:35 UTC
+AWS Tax Settings,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Relational Database Service (Amazon RDS),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Lookout for Equipment,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon AppFlow,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+Amazon GameLift,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Elastic Transcoder,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Clean Rooms ML,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Schema Conversion Tool (AWS SCT),OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon EMR,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Lumberyard,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Tiros,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Nova,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Chatbot,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Savings Plans,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Database Migration Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon QLDB,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Detective,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Security Token Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Management Console,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Signin,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+All API's called by the AWS CLI,API,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS CloudTrail,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon Relational Database Service (Amazon RDS) for Db2,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Trainium,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Transcribe,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Elastic Kubernetes Service (Amazon EKS),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Inspector Classic,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon lookout,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Elastic Load Balancing,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS DeepLens,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+https://*.amazonaws.com/*,OTHER,"",false,false,,,,critical,,2024-06-18 13:31:56 UTC,2025-01-17 18:55:44 UTC
+Amazon Nimble Studio,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS CloudWatch RUM,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Keyspaces (for Apache Cassandra),OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Control Catalog,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Identity Sync,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Snow Device Management,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Virtual Private Cloud (Amazon VPC),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Application Cost Profiler Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Wavelength,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Mechanical Turk,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon Message Gateway Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Simple Email Service v2,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS HealthImaging,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS OpsWorks,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Elastic Container Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Certificate Manager,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Lake Formation,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Simple Workflow Service (Amazon SWF),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+*.aws.dev,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+Amazon SageMaker Ground Truth,OTHER,"",false,true,,,,critical,,2025-07-09 13:36:31 UTC,2025-07-09 13:36:31 UTC
+AWS Private Certificate Authority,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+https://*.aws.amazon.com/*,OTHER,"",false,true,high,high,high,critical,,2024-06-04 22:23:00 UTC,2024-06-04 22:23:00 UTC
+AWS Proton,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Well-Architected Tool,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon GroundTruth Labeling,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+*.cloudendure.com,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+Amazon Translate,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon CloudWatch RUM,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS BugBust,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+FreeRTOS,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+AWS Cost and Usage Report,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Cloud Control API,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon Resource Group Tagging API,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Entity Resolution,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Elastic Container Registry (Amazon ECR),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon Elastic File System,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon CloudWatch,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Managed Workflows for Apache Airflow (Amazon MWAA),OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon WorkSpaces Thin Client,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Elemental Appliances and Software,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+https://github.com/awslabs/*,WILDCARD,"",false,true,,,,none,,2024-10-01 19:18:22 UTC,2026-03-17 14:34:57 UTC
+AWS CloudTrail Lake,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon Athena,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+AWS Activate,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Managed Grafana,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon Personalize,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon CloudWatch Application Insights,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Aurora DSQL,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon S3,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Backup,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon Chime SDK,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Corretto,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Firecracker,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+AWS Security Hub,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS User Notifications Contacts,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon One Enterprise,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:01 UTC,2024-09-05 12:31:01 UTC
+AWS Server Migration Service (AWS SMS),OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Elastic Block Store (Amazon EBS),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Migration Acceleration Program Credits,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Serverless Application Model (AWS SAM),OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+*.sa.aws.dev,OTHER,"",false,true,none,none,none,none,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+Amazon Silk,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Databases,OTHER,"",false,true,not_defined,not_defined,not_defined,critical,,2024-06-18 13:31:55 UTC,2025-09-16 14:59:38 UTC
+Amazon Cognito User Pools,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS End User Messaging SMS and Voice V2,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS IoT FleetWise,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon AppStream,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+Amazon Verified Permissions,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon EC2 Auto Scaling,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+Amazon SageMaker HyperPod,OTHER,"",false,true,,,,critical,,2025-07-09 13:36:31 UTC,2025-07-09 13:36:31 UTC
+AWS Application Migration Service,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS Verified Access,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Cloud Map,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Mobile SDK for Android,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Machine Learning (Amazon ML),OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS App Mesh,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon Neptune,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS CodePipeline,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Thinkbox,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon AppStream 2.0,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:54 UTC,2024-09-05 12:30:54 UTC
+AWS Inspector,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Diode Messaging,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon DocumentDB Elastic Clusters,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Elastic Beanstalk,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon DynamoDB Accelerator (DAX),OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon Remote Configuration,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://github.com/kubernetes-sigs/aws-fsx-csi-driver,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Application Cost Profiler,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS Invoicing Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon CloudSearch,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Q,OTHER,"",false,true,,,,critical,,2025-07-09 13:37:02 UTC,2025-07-09 13:37:02 UTC
+AWS Serverless Application Repository,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon WorkMail,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://github.com/aws/amazon-ecs-agent,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS IAM Identity Center (successor to AWS Single Sign-On),OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Textract,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Outposts,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+EC2 Image Builder,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+AWS Account Management,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon AppIntegrations,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Recycle Bin,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Cloudfront https://aws.amazon.com/cloudfront/,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Command Line Interface (AWS CLI),OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS SecurityHub,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon DynamoDB Streams,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+https://github.com/aws/s2n-tls,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Diode,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS Purchase Orders Console,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Shield Standard,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS User Notifications,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Chalice,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Managed Services (AMS),OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Migration Hub Refactor Spaces,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Apache Kafka APIs for Amazon MSK clusters,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+https://github.com/kubernetes-sigs/aws-load-balancer-controller,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS WAF,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS Snowmobile,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Managed Streaming for Kafka Connect,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+CloudEndure Disaster Recovery,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+AWS Elemental MediaConvert,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon Titan,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS App Studio,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Resource Explorer,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS IQ,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+Devices,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+https://github.com/kubernetes-sigs/aws-iam-authenticator,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+https://github.com/kubernetes-sigs/aws-ebs-csi-driver,SOURCE_CODE,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+Amazon Q in Connect,OTHER,"",false,true,,,,critical,,2025-07-09 13:37:02 UTC,2025-07-09 13:37:02 UTC
+AWS Direct Connect,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+AWS SDK for Java,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS SQL Workbench,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS CodeBuild,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Transit Gateway,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Panorama,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Server Migration Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+https://*.aws.a2z.com/*,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:57 UTC,2024-06-18 13:31:57 UTC
+AWS Device Farm,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+*.gaming.amazon.com,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS Free Tier,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon Connect,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon CodeGuru,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Machine Learning,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon AI Operations,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon CodeGuru Profiler,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS Audit Manager,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon Security Lake,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+*.people.aws.com,OTHER,"",false,true,none,low,none,low,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS Snowcone,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Kendra,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS IoT TwinMaker,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Snowball Edge,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+All API's called by the AWS CLI,OTHER,"",false,true,high,high,high,critical,,2024-06-18 13:31:56 UTC,2024-06-18 13:31:56 UTC
+AWS HealthScribe,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+Amazon Managed Blockchain (AMB),OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS Connector Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Payments,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS IoT RoboRunner,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon OpenSearch Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Toolkit for Microsoft Azure DevOps,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon Comprehend,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Managed Streaming for Apache Kafka (Amazon MSK),OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon Kinesis Video Streams,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+AWS OpsWorks Stacks,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS rePost Private,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Import Export Disk Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Application Composer,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon Simple Workflow Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+*.workshops.aws.dev,OTHER,"",false,true,low,low,low,medium,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS RoboMaker,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS SDK for .NET and Xamarin,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Amplify,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+AWS CodeDeploy,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Inferentia,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS Resource Access Manager (AWS RAM),OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Client VPN,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon Timestream for InfluxDB,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+Amazon DataZone,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS GameKit,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Blox,OTHER,"",false,true,,,,critical,,2024-09-05 12:33:09 UTC,2024-09-05 12:33:09 UTC
+Amazon Cognito,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+AWS Budget Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+AWS Resource Groups,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+Amazon FreeRTOS,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Data Pipeline,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS Import/Export,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+Amazon CloudWatch Events,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:55 UTC,2024-09-05 12:30:55 UTC
+Amazon Elastic Inference,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS DeepRacer,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:21 UTC,2024-09-05 12:30:21 UTC
+Amazon MemoryDB,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+VPC Reachability Analyzer,OTHER,"",false,true,,,,critical,,2024-09-05 12:34:35 UTC,2024-09-05 12:34:35 UTC
+Amazon WorkSpaces,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Cloud Digital Interface (CDI) SDK,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+AWS IoT Device Defender,OTHER,"",false,true,,,,critical,,2025-11-21 13:10:01 UTC,2025-11-21 13:10:01 UTC
+Amazon FSx for OpenZFS,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:59 UTC,2024-09-05 12:30:59 UTC
+AWS Console Mobile Application,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:20 UTC,2024-09-05 12:30:20 UTC
+Amazon Redshift,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+*.amazongames.com,OTHER,"",false,true,,,,critical,,2024-06-18 13:31:55 UTC,2024-06-18 13:31:55 UTC
+AWS Sustainability,OTHER,"",false,true,,,,critical,,2025-11-21 13:11:40 UTC,2025-11-21 13:11:40 UTC
+AWS Health Dashboard,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:22 UTC,2024-09-05 12:30:22 UTC
+AWS Auto Scaling,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC
+Amazon Kinesis,OTHER,"",false,true,,,,critical,,2024-09-05 12:31:00 UTC,2024-09-05 12:31:00 UTC
+Amazon Interactive Video Service,OTHER,"",false,true,,,,critical,,2025-11-21 13:12:59 UTC,2025-11-21 13:12:59 UTC
+AWS Builder ID,OTHER,"",false,true,,,,critical,,2024-09-05 12:30:19 UTC,2024-09-05 12:30:19 UTC

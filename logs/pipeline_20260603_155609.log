@@ -1,0 +1,6 @@
+2026-06-03 15:56:11,849 [WARNING] clone_manager.py:52 -- Clone attempt 1 failed: fatal: destination path 'C:\Users\parve\project_v2_extracted\project_v2\repos\aws_aws-cli' already exists and is not an empty directory.
+
+2026-06-03 15:56:13,887 [WARNING] clone_manager.py:52 -- Clone attempt 2 failed: fatal: destination path 'C:\Users\parve\project_v2_extracted\project_v2\repos\aws_aws-cli' already exists and is not an empty directory.
+
+2026-06-03 15:56:17,906 [WARNING] clone_manager.py:52 -- Clone attempt 3 failed: fatal: destination path 'C:\Users\parve\project_v2_extracted\project_v2\repos\aws_aws-cli' already exists and is not an empty directory.
+

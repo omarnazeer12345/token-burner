@@ -1,0 +1,4 @@
+2026-06-03 15:58:20,690 [ERROR] audit_engine.py:88 -- Kimi API auth failed: Error code: 401 - {'error': {'message': 'Invalid Authentication', 'type': 'invalid_authentication_error'}}
+2026-06-03 15:58:20,691 [ERROR] audit_engine.py:254 -- Audit failed for aws/aws-cli: Error code: 401 - {'error': {'message': 'Invalid Authentication', 'type': 'invalid_authentication_error'}}
+2026-06-03 15:58:20,693 [INFO] reporter.py:177 -- Report written: C:\Users\parve\project_v2_extracted\project_v2\reports\individual\aws_aws-cli.md
+2026-06-03 15:58:20,695 [INFO] reporter.py:208 -- JSON report written: C:\Users\parve\project_v2_extracted\project_v2\reports\individual\aws_aws-cli.json
