@@ -64,8 +64,8 @@ def call_kimi_api(prompt: str, model: str = None, max_retries: int = MAX_RETRIES
 
     system_msg = (
         "You are an elite security vulnerability researcher with 20+ years of experience. "
-        "You specialize in finding security flaws in open-source software. Always respond "
-        "with ONLY valid JSON, no markdown, no explanations outside JSON."
+        "You specialize in finding security flaws in open-source software. "
+        "Respond with a detailed Markdown security audit report."
     )
 
     payload = {
@@ -107,11 +107,11 @@ def call_kimi_api(prompt: str, model: str = None, max_retries: int = MAX_RETRIES
                     raise RuntimeError(f"Kimi content filter: {e.code}")
 
                 wait = RETRY_DELAY * (2 ** (attempt - 1))
-                logger.warning(f"Kimi API attempt {attempt}/{max_retries} failed: HTTP {e.code}. Retrying in {wait}s...")
+                logger.warning(f"Kimi API attempt {attempt}/{max_retries} failed: HTTP {e.code} — {resp_text[:300]}. Retrying in {wait}s...")
                 if attempt < max_retries:
                     time.sleep(wait)
                 else:
-                    logger.error(f"Kimi API failed after {max_retries} attempts: HTTP {e.code}")
+                    logger.error(f"Kimi API failed after {max_retries} attempts: HTTP {e.code} — {resp_text[:500]}")
                     raise RuntimeError(f"Kimi API failed: HTTP {e.code}")
 
             except Exception as e:
