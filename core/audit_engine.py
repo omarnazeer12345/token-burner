@@ -166,10 +166,32 @@ INSTRUCTIONS:
 5. If a function uses eval/exec/subprocess/shell with variable input — FLAG IT
 6. If secrets, tokens, passwords, or keys appear hardcoded or in config files — FLAG IT
 7. Do NOT ignore issues just because they seem "minor" — report them with appropriate severity
-8. You MUST respond with ONLY valid JSON. No markdown, no explanations outside JSON.
+8. Write your response as a professional Markdown security audit report. Use headings, bullet points, and code blocks. Do NOT wrap your entire response in JSON.
 
-JSON FORMAT:
-{{"findings": [{{"severity": "Critical|High|Medium|Low|Info", "category": "Secret Leak|Injection|RCE|SSRF|Path Traversal|Auth Bypass|Crypto|Memory Safety|Dependency|Info Leak|Race Condition|Misconfig|Deserialization|Other", "cwe_id": "CWE-XXX", "file": "path/to/file", "line_numbers": [1], "description": "...", "evidence": "code snippet", "remediation": "how to fix", "confidence": "High|Medium|Low"}}]}}
+REPORT FORMAT:
+# Security Audit Report: {repo_name}
+
+## Executive Summary
+(Brief overview of what was audited and top-level risk assessment)
+
+## Findings
+
+### [SEVERITY] Finding Title
+- **File:** `path/to/file`
+- **Line(s):** 42
+- **Category:** Injection / Secret Leak / etc.
+- **CWE:** CWE-XXX
+- **Description:** Clear explanation of the vulnerability
+- **Evidence:**
+```python
+code snippet showing the issue
+```
+- **Remediation:** How to fix it
+
+(Repeat for every finding)
+
+## Recommendations
+(Summary of recommended actions)
 """
     return prompt
 
@@ -321,42 +343,36 @@ def _estimate_cvss(finding: Dict) -> Dict:
 
 
 def audit_repo(repo_name: str, files: List[Dict], metadata: Dict) -> Dict:
-    """Perform full AI security audit on a repository."""
+    """Perform full AI security audit on a repository. Returns raw report + optional structured findings."""
     start_time = time.time()
 
     try:
         prompt = create_audit_prompt(files, repo_name, metadata)
-        response = call_kimi_api(prompt, model=KIMI_MODEL)
+        raw_report = call_kimi_api(prompt, model=KIMI_MODEL)
 
-        result = _extract_json(response)
-        if not result:
-            logger.warning(f"JSON parse failed for {repo_name}, retrying...")
-            fixed_prompt = prompt + "\n\nIMPORTANT: Respond ONLY with valid JSON. No other text."
-            response = call_kimi_api(fixed_prompt, model=KIMI_MODEL)
-            result = _extract_json(response)
-
-        if not result:
-            logger.error(f"Failed to parse JSON for {repo_name} after retry")
-            return _empty_result(repo_name)
-
-        findings = result.get('findings', [])
-        valid_files = {f['path'] for f in files}
-
-        processed = []
-        for i, f in enumerate(findings):
-            if f.get('file') and f['file'] not in valid_files:
-                continue
-            f['id'] = f"F-{metadata.get('repo_id', '???')}-{i:03d}"
-            if not f.get('cwe_id'):
-                f['cwe_id'] = _assign_cwe(f.get('category', 'Other'))
-            f.update(_estimate_cvss(f))
-            sev = f.get('severity', 'Info')
-            if sev not in SEVERITY_ORDER:
-                f['severity'] = 'Info'
-            processed.append(f)
+        # Optionally try to extract structured findings for stats (best effort)
+        findings = []
+        try:
+            result = _extract_json(raw_report)
+            if result:
+                raw_findings = result.get('findings', [])
+                valid_files = {f['path'] for f in files}
+                for i, f in enumerate(raw_findings):
+                    if f.get('file') and f['file'] not in valid_files:
+                        continue
+                    f['id'] = f"F-{metadata.get('repo_id', '???')}-{i:03d}"
+                    if not f.get('cwe_id'):
+                        f['cwe_id'] = _assign_cwe(f.get('category', 'Other'))
+                    f.update(_estimate_cvss(f))
+                    sev = f.get('severity', 'Info')
+                    if sev not in SEVERITY_ORDER:
+                        f['severity'] = 'Info'
+                    findings.append(f)
+        except Exception:
+            pass  # Raw text mode — structured findings are optional
 
         summary = {'Critical': 0, 'High': 0, 'Medium': 0, 'Low': 0, 'Info': 0}
-        for f in processed:
+        for f in findings:
             s = f.get('severity', 'Info')
             summary[s] = summary.get(s, 0) + 1
 
@@ -366,7 +382,8 @@ def audit_repo(repo_name: str, files: List[Dict], metadata: Dict) -> Dict:
             'repo_id': metadata.get('repo_id', ''),
             'audit_timestamp': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
             'files_analyzed': len(files),
-            'findings': processed,
+            'raw_report': raw_report,
+            'findings': findings,
             'summary': {
                 'critical_count': summary['Critical'],
                 'high_count': summary['High'],
@@ -375,7 +392,7 @@ def audit_repo(repo_name: str, files: List[Dict], metadata: Dict) -> Dict:
                 'info_count': summary['Info'],
                 'total_files': len(files),
                 'duration_seconds': round(duration, 2),
-                'total_findings': len(processed),
+                'total_findings': len(findings),
             }
         }
 
@@ -388,7 +405,7 @@ def _empty_result(repo_name: str, error: str = '') -> Dict:
     return {
         'repo': repo_name, 'repo_id': '',
         'audit_timestamp': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
-        'files_analyzed': 0, 'findings': [],
+        'files_analyzed': 0, 'raw_report': '', 'findings': [],
         'summary': {
             'critical_count': 0, 'high_count': 0, 'medium_count': 0,
             'low_count': 0, 'info_count': 0, 'total_files': 0,

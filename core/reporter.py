@@ -44,135 +44,126 @@ def generate_repo_report(
     output_dir: Path = REPORTS_DIR,
 ) -> Path:
     """
-    Generate a beautiful Markdown report for a single repository.
+    Generate a Markdown report for a single repository.
 
-    Parameters
-    ----------
-    audit_result : dict
-        Raw audit output containing ``repo``, ``audit_timestamp``, ``summary``,
-        and ``findings`` keys.
-    output_dir : Path
-        Directory where the ``.md`` file will be written.  Defaults to
-        :py:data:`config.settings.REPORTS_DIR`.
-
-    Returns
-    -------
-    Path
-        Absolute path to the generated Markdown file.
+    If ``raw_report`` is present, writes it directly.
+    Otherwise falls back to structured findings table format.
     """
     output_dir.mkdir(parents=True, exist_ok=True)
 
     repo_name = audit_result.get("repo", "unknown").replace("/", "_")
     output_path = output_dir / f"{repo_name}.md"
 
+    raw_report = audit_result.get("raw_report", "")
     summary = audit_result.get("summary", {})
     findings: List[Dict[str, Any]] = audit_result.get("findings", [])
 
     lines: List[str] = []
 
-    # ---- Header ------------------------------------------------------------
-    lines.append(f"# Security Audit Report: `{audit_result.get('repo', 'unknown')}`")
-    lines.append("")
-    lines.append(f"**Audit Date:** {audit_result.get('audit_timestamp', 'N/A')}")
-    lines.append(f"**Files Analyzed:** {summary.get('total_files', 0)}")
-    lines.append(f"**Total Findings:** {len(findings)}")
-    if summary.get("duration_seconds"):
-        lines.append(f"**Duration:** {summary['duration_seconds']:.1f}s")
-    lines.append("")
-
-    # ---- Severity Summary (badges) -----------------------------------------
-    lines.append("## Severity Summary")
-    lines.append("")
-    sev_counts: List[str] = []
-    for sev in ("Critical", "High", "Medium", "Low", "Info"):
-        count = summary.get(f"{sev.lower()}_count", 0)
-        if count > 0:
-            icon = SEVERITY_ICONS.get(sev, "")
-            sev_counts.append(f"{icon} **{sev}:** {count}")
-    lines.append(" | ".join(sev_counts) if sev_counts else "No findings.")
-    lines.append("")
-
-    # ---- ASCII bar chart ---------------------------------------------------
-    max_count = max(
-        [summary.get(f"{s.lower()}_count", 0) for s in SEVERITY_RANK.keys()],
-        default=1,
-    )
-    for sev in ("Critical", "High", "Medium", "Low", "Info"):
-        count = summary.get(f"{sev.lower()}_count", 0)
-        bar_len = int((count / max_count) * 30) if max_count > 0 else 0
-        bar = "█" * bar_len
-        lines.append(f"{sev:<10} {bar} {count}")
-    lines.append("")
-
-    # ---- Findings table ----------------------------------------------------
-    if findings:
-        lines.append("## Findings")
+    # ---- Raw report mode (direct AI output) --------------------------------
+    if raw_report:
+        lines.append(raw_report)
         lines.append("")
-        lines.append(
-            "| ID | Severity | Category | CWE | File | Line | Confidence |"
+        lines.append("---")
+        lines.append("")
+        lines.append(f"*Audit metadata: {audit_result.get('repo', 'unknown')} | "
+                     f"{audit_result.get('audit_timestamp', 'N/A')} | "
+                     f"{summary.get('total_files', 0)} files analyzed*")
+    else:
+        # ---- Structured findings fallback --------------------------------
+        lines.append(f"# Security Audit Report: `{audit_result.get('repo', 'unknown')}`")
+        lines.append("")
+        lines.append(f"**Audit Date:** {audit_result.get('audit_timestamp', 'N/A')}")
+        lines.append(f"**Files Analyzed:** {summary.get('total_files', 0)}")
+        lines.append(f"**Total Findings:** {len(findings)}")
+        if summary.get("duration_seconds"):
+            lines.append(f"**Duration:** {summary['duration_seconds']:.1f}s")
+        lines.append("")
+
+        lines.append("## Severity Summary")
+        lines.append("")
+        sev_counts: List[str] = []
+        for sev in ("Critical", "High", "Medium", "Low", "Info"):
+            count = summary.get(f"{sev.lower()}_count", 0)
+            if count > 0:
+                icon = SEVERITY_ICONS.get(sev, "")
+                sev_counts.append(f"{icon} **{sev}:** {count}")
+        lines.append(" | ".join(sev_counts) if sev_counts else "No findings.")
+        lines.append("")
+
+        max_count = max(
+            [summary.get(f"{s.lower()}_count", 0) for s in SEVERITY_RANK.keys()],
+            default=1,
         )
-        lines.append(
-            "|----|----------|----------|-----|------|------|------------|"
-        )
-
-        for f in sorted(
-            findings,
-            key=lambda x: SEVERITY_RANK.get(x.get("severity", "Info"), 0),
-            reverse=True,
-        ):
-            icon = SEVERITY_ICONS.get(f.get("severity", ""), "")
-            lines.append(
-                f"| {f.get('id', 'N/A')} | {icon} {f.get('severity', '?')} | "
-                f"{f.get('category', '?')} | {f.get('cwe_id', 'N/A')} | "
-                f"`{f.get('file', '?')}` | {f.get('line_numbers', [])} | "
-                f"{f.get('confidence', '?')} |"
-            )
+        for sev in ("Critical", "High", "Medium", "Low", "Info"):
+            count = summary.get(f"{sev.lower()}_count", 0)
+            bar_len = int((count / max_count) * 30) if max_count > 0 else 0
+            bar = "█" * bar_len
+            lines.append(f"{sev:<10} {bar} {count}")
         lines.append("")
 
-        # ---- Detailed findings --------------------------------------------
-        lines.append("## Detailed Findings")
-        lines.append("")
-
-        for f in sorted(
-            findings,
-            key=lambda x: SEVERITY_RANK.get(x.get("severity", "Info"), 0),
-            reverse=True,
-        ):
-            icon = SEVERITY_ICONS.get(f.get("severity", ""), "")
-            lines.append(
-                f"### {icon} [{f.get('severity', '?')}] "
-                f"{f.get('id', 'N/A')}: {f.get('category', 'Unknown')}"
-            )
+        if findings:
+            lines.append("## Findings")
             lines.append("")
-            lines.append(f"- **File:** `{f.get('file', '?')}`")
-            lines.append(f"- **Line(s):** {f.get('line_numbers', [])}")
-            lines.append(f"- **CWE:** {f.get('cwe_id', 'N/A')}")
-            lines.append(f"- **CVSS Score:** {f.get('cvss_score', 'N/A')}")
-            lines.append(f"- **Confidence:** {f.get('confidence', 'N/A')}")
-            lines.append(f"- **Verified:** {'Yes' if f.get('verified') else 'No'}")
+            lines.append("| ID | Severity | Category | CWE | File | Line | Confidence |")
+            lines.append("|----|----------|----------|-----|------|------|------------|")
+
+            for f in sorted(
+                findings,
+                key=lambda x: SEVERITY_RANK.get(x.get("severity", "Info"), 0),
+                reverse=True,
+            ):
+                icon = SEVERITY_ICONS.get(f.get("severity", ""), "")
+                lines.append(
+                    f"| {f.get('id', 'N/A')} | {icon} {f.get('severity', '?')} | "
+                    f"{f.get('category', '?')} | {f.get('cwe_id', 'N/A')} | "
+                    f"`{f.get('file', '?')}` | {f.get('line_numbers', [])} | "
+                    f"{f.get('confidence', '?')} |"
+                )
             lines.append("")
 
-            if f.get("description"):
-                lines.append("**Description:**")
-                lines.append(f"{f['description']}")
-                lines.append("")
-
-            if f.get("evidence"):
-                lines.append("**Evidence:**")
-                lines.append("```")
-                lines.append(f"{f['evidence']}")
-                lines.append("```")
-                lines.append("")
-
-            if f.get("remediation"):
-                lines.append("**Remediation:**")
-                lines.append(f"{f['remediation']}")
-                lines.append("")
-
-            lines.append("---")
+            lines.append("## Detailed Findings")
             lines.append("")
 
-    # ---- Write file --------------------------------------------------------
+            for f in sorted(
+                findings,
+                key=lambda x: SEVERITY_RANK.get(x.get("severity", "Info"), 0),
+                reverse=True,
+            ):
+                icon = SEVERITY_ICONS.get(f.get("severity", ""), "")
+                lines.append(
+                    f"### {icon} [{f.get('severity', '?')}] "
+                    f"{f.get('id', 'N/A')}: {f.get('category', 'Unknown')}"
+                )
+                lines.append("")
+                lines.append(f"- **File:** `{f.get('file', '?')}`")
+                lines.append(f"- **Line(s):** {f.get('line_numbers', [])}")
+                lines.append(f"- **CWE:** {f.get('cwe_id', 'N/A')}")
+                lines.append(f"- **CVSS Score:** {f.get('cvss_score', 'N/A')}")
+                lines.append(f"- **Confidence:** {f.get('confidence', 'N/A')}")
+                lines.append(f"- **Verified:** {'Yes' if f.get('verified') else 'No'}")
+                lines.append("")
+
+                if f.get("description"):
+                    lines.append("**Description:**")
+                    lines.append(f"{f['description']}")
+                    lines.append("")
+
+                if f.get("evidence"):
+                    lines.append("**Evidence:**")
+                    lines.append("```")
+                    lines.append(f"{f['evidence']}")
+                    lines.append("```")
+                    lines.append("")
+
+                if f.get("remediation"):
+                    lines.append("**Remediation:**")
+                    lines.append(f"{f['remediation']}")
+                    lines.append("")
+
+                lines.append("---")
+                lines.append("")
+
     output_path.write_text("\n".join(lines), encoding="utf-8")
     logger.info("Report written: %s", output_path)
     return output_path
