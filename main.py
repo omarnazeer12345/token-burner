@@ -410,6 +410,13 @@ def run_pipeline(args):
     
     print_startup_banner()
     
+    # Override API key BEFORE validation so config reloads with it
+    if args.kimi_api_key:
+        os.environ['KIMI_API_KEY'] = args.kimi_api_key
+        import importlib
+        import config.settings
+        importlib.reload(config.settings)
+    
     # Validate config
     issues = validate_config()
     for issue in issues:
@@ -419,16 +426,14 @@ def run_pipeline(args):
         else:
             print(f"\033[93m{issue}\033[0m")
     
-    # Override API key if provided
-    if args.kimi_api_key:
-        os.environ['KIMI_API_KEY'] = args.kimi_api_key
-        import importlib
-        import config.settings
-        importlib.reload(config.settings)
-        from config.settings import KIMI_API_KEY as KIMI_KEY
-        if not KIMI_KEY:
-            print("\033[91mERROR: Kimi API key not set!\033[0m")
-            return 1
+    # Double-check key is present after reload
+    import importlib
+    import config.settings
+    importlib.reload(config.settings)
+    from config.settings import KIMI_API_KEY as KIMI_KEY
+    if not KIMI_KEY:
+        print("\033[91mERROR: Kimi API key not set!\033[0m")
+        return 1
     
     # Settings summary
     ui = ProgressUI()

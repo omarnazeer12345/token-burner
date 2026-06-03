@@ -136,7 +136,18 @@ def create_audit_prompt(files: List[Dict], repo_name: str, repo_metadata: Dict) 
         content = f.get('content', '')
         file_contents += f"\n{'='*60}\nFILE: {f['path']}\n{'='*60}\n{content}\n"
 
-    prompt = f"""Perform a comprehensive security audit of the following open-source code repository.
+    # Guard against oversized payload (~2 MB limit)
+    MAX_PAYLOAD_BYTES = 1_800_000
+    while len(prompt.encode("utf-8")) > MAX_PAYLOAD_BYTES:
+        files = files[:len(files)//2]
+        file_tree = "\n".join([f"  {i+1}. {f['path']} ({f.get('lines', '?')} lines)"
+                              for i, f in enumerate(files[:MAX_FILES_PER_REPO])])
+        file_contents = ""
+        for f in files[:MAX_FILES_PER_REPO]:
+            content = f.get('content', '')
+            file_contents += f"\n{'='*60}\nFILE: {f['path']}\n{'='*60}\n{content}\n"
+
+    prompt = f"""You are a paranoid elite security auditor. Perform an aggressive, deep-dive security audit of the following repository. Be thorough and suspicious — flag ANYTHING that could be a vulnerability, insecure pattern, or defense-in-depth gap.
 
 REPOSITORY: {repo_name}
 FILES ANALYZED: {len(files)}
@@ -148,12 +159,14 @@ SOURCE CODE:
 {file_contents}
 
 INSTRUCTIONS:
-1. Analyze ALL provided files for security vulnerabilities
-2. Focus ONLY on ACTUAL exploitable vulnerabilities
+1. Analyze ALL provided files aggressively for security issues
+2. Report EVERY suspicious pattern, insecure default, missing validation, overly broad permission, hardcoded value, weak crypto, unsafe deserialization, unsafe eval/exec, user input used unsafely, missing auth checks, verbose error messages, sensitive data in logs, SSRF, open redirects, path traversal, race conditions, TOCTOU, injection flaws, and buffer overflows
 3. For each finding, provide exact file path, line numbers, severity, category, CWE ID, description, evidence code snippet, and remediation
-4. Check for: hardcoded secrets, injection vulns (SQLi, XSS, CMDi, XXE), RCE, SSRF, path traversal, auth bypass, crypto issues, memory safety, dependency issues, info leaks, race conditions, misconfigurations
-5. Do NOT report test data, examples, documentation issues, or style problems
-6. You MUST respond with ONLY valid JSON. No markdown, no explanations.
+4. If a file handles user input, network data, file paths, or credentials and lacks validation — FLAG IT
+5. If a function uses eval/exec/subprocess/shell with variable input — FLAG IT
+6. If secrets, tokens, passwords, or keys appear hardcoded or in config files — FLAG IT
+7. Do NOT ignore issues just because they seem "minor" — report them with appropriate severity
+8. You MUST respond with ONLY valid JSON. No markdown, no explanations outside JSON.
 
 JSON FORMAT:
 {{"findings": [{{"severity": "Critical|High|Medium|Low|Info", "category": "Secret Leak|Injection|RCE|SSRF|Path Traversal|Auth Bypass|Crypto|Memory Safety|Dependency|Info Leak|Race Condition|Misconfig|Deserialization|Other", "cwe_id": "CWE-XXX", "file": "path/to/file", "line_numbers": [1], "description": "...", "evidence": "code snippet", "remediation": "how to fix", "confidence": "High|Medium|Low"}}]}}
@@ -161,28 +174,119 @@ JSON FORMAT:
     return prompt
 
 
+def _repair_json(text: str) -> str:
+    """Aggressively repair common JSON malformations from LLM output."""
+    # 1. Strip markdown fences and surrounding text
+    text = text.strip()
+    if text.startswith('```'):
+        text = re.sub(r'^```(?:json)?\s*\n?', '', text, flags=re.IGNORECASE)
+        text = re.sub(r'\n?```\s*$', '', text)
+        text = text.strip()
+
+    # 2. Remove single-line comments
+    text = re.sub(r'//.*$', '', text, flags=re.MULTILINE)
+    # Remove multi-line comments
+    text = re.sub(r'/\*.*?\*/', '', text, flags=re.DOTALL)
+
+    # 3. Remove trailing commas before ] or }
+    text = re.sub(r',(\s*[}\]])', r'\1', text)
+
+    # 4. Fix unescaped newlines inside string values (basic heuristic)
+    # Replace raw newlines that appear inside quotes with \n
+    def fix_newlines_in_strings(s):
+        result = []
+        in_str = False
+        escape = False
+        for ch in s:
+            if escape:
+                result.append(ch)
+                escape = False
+                continue
+            if ch == '\\':
+                result.append(ch)
+                escape = True
+                continue
+            if ch == '"':
+                in_str = not in_str
+                result.append(ch)
+                continue
+            if ch in '\n\r' and in_str:
+                result.append('\\n')
+                continue
+            result.append(ch)
+        return ''.join(result)
+    text = fix_newlines_in_strings(text)
+
+    # 5. Balance braces by truncating at the last valid closing brace
+    open_count = 0
+    last_valid_pos = -1
+    for i, ch in enumerate(text):
+        if ch == '{':
+            open_count += 1
+        elif ch == '}':
+            open_count -= 1
+            if open_count == 0:
+                last_valid_pos = i
+    if last_valid_pos > 0:
+        text = text[:last_valid_pos + 1]
+
+    return text.strip()
+
+
 def _extract_json(text: str) -> Optional[Dict]:
-    """Extract JSON from AI response with multiple strategies."""
+    """Extract JSON from AI response with aggressive repair strategies."""
+    # Strategy 1: Direct parse
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
 
-    # Try markdown fences
-    match = re.search(r'```(?:json)?\s*\n?(.*?)\n?```', text, re.DOTALL)
+    # Strategy 2: Markdown fences
+    match = re.search(r'```(?:json)?\s*\n?(.*?)\n?```', text, re.DOTALL | re.IGNORECASE)
     if match:
+        inner = match.group(1).strip()
         try:
-            return json.loads(match.group(1).strip())
+            return json.loads(inner)
         except json.JSONDecodeError:
-            pass
+            repaired = _repair_json(inner)
+            try:
+                return json.loads(repaired)
+            except json.JSONDecodeError:
+                pass
 
-    # Try raw JSON object
-    match = re.search(r'\{[\s\S]*\}', text)
-    if match:
+    # Strategy 3: Find the largest { ... } block and repair it
+    best = None
+    best_len = 0
+    for m in re.finditer(r'\{', text):
+        start = m.start()
+        depth = 0
+        for i in range(start, len(text)):
+            if text[i] == '{':
+                depth += 1
+            elif text[i] == '}':
+                depth -= 1
+                if depth == 0:
+                    candidate = text[start:i + 1]
+                    if len(candidate) > best_len:
+                        best_len = len(candidate)
+                        best = candidate
+                    break
+    if best:
         try:
-            return json.loads(match.group(0))
+            return json.loads(best)
         except json.JSONDecodeError:
-            pass
+            repaired = _repair_json(best)
+            try:
+                return json.loads(repaired)
+            except json.JSONDecodeError:
+                pass
+
+    # Strategy 4: Repair the entire text and try again
+    repaired = _repair_json(text)
+    try:
+        return json.loads(repaired)
+    except json.JSONDecodeError:
+        pass
 
     return None
 

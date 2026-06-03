@@ -54,9 +54,9 @@ PRIORITY_KEYWORDS: List[str] = [
     "request", "http", "url", "upload", "file", "path",
     "deserialize", "marshal", "pickle", "yaml.load",
 ]
-MAX_FILES_PER_REPO: int = int(os.getenv("MAX_FILES_PER_REPO", "50"))
-MAX_FILE_SIZE_KB: int = int(os.getenv("MAX_FILE_SIZE_KB", "100"))
-MAX_LINES_PER_FILE: int = int(os.getenv("MAX_LINES_PER_FILE", "500"))
+MAX_FILES_PER_REPO: int = int(os.getenv("MAX_FILES_PER_REPO", "500"))
+MAX_FILE_SIZE_KB: int = int(os.getenv("MAX_FILE_SIZE_KB", "500"))
+MAX_LINES_PER_FILE: int = int(os.getenv("MAX_LINES_PER_FILE", "1000"))
 
 # -- Paths ---------------------------------------------------------------------
 BASE_DIR: Path = Path(__file__).parent.parent
