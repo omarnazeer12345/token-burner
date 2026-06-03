@@ -136,7 +136,7 @@ def create_audit_prompt(files: List[Dict], repo_name: str, repo_metadata: Dict) 
         content = f.get('content', '')
         file_contents += f"\n{'='*60}\nFILE: {f['path']}\n{'='*60}\n{content}\n"
 
-    prompt = f"""You are a paranoid elite security auditor. Perform an aggressive, deep-dive security audit of the following repository. Be thorough and suspicious — flag ANYTHING that could be a vulnerability, insecure pattern, or defense-in-depth gap.
+    prompt = f"""You are a professional application security engineer conducting a code review. Please review the following source files and produce a structured security assessment report.
 
 REPOSITORY: {repo_name}
 FILES ANALYZED: {len(files)}
@@ -148,20 +148,17 @@ SOURCE CODE:
 {file_contents}
 
 INSTRUCTIONS:
-1. Analyze ALL provided files aggressively for security issues
-2. Report EVERY suspicious pattern, insecure default, missing validation, overly broad permission, hardcoded value, weak crypto, unsafe deserialization, unsafe eval/exec, user input used unsafely, missing auth checks, verbose error messages, sensitive data in logs, SSRF, open redirects, path traversal, race conditions, TOCTOU, injection flaws, and buffer overflows
-3. For each finding, provide exact file path, line numbers, severity, category, CWE ID, description, evidence code snippet, and remediation
-4. If a file handles user input, network data, file paths, or credentials and lacks validation — FLAG IT
-5. If a function uses eval/exec/subprocess/shell with variable input — FLAG IT
-6. If secrets, tokens, passwords, or keys appear hardcoded or in config files — FLAG IT
-7. Do NOT ignore issues just because they seem "minor" — report them with appropriate severity
-8. Write your response as a professional Markdown security audit report. Use headings, bullet points, and code blocks. Do NOT wrap your entire response in JSON.
+1. Review the provided source files for potential security weaknesses
+2. Identify issues such as: missing input validation, hardcoded credentials, unsafe use of eval/exec, SQL injection risks, XSS risks, insecure cryptographic practices, verbose error handling, path traversal risks, SSRF risks, missing authentication checks, and insecure deserialization
+3. For each issue found, document: file path, line numbers, severity level (Critical/High/Medium/Low/Info), category, CWE identifier, description, evidence from the code, and recommended remediation
+4. Include code snippets as evidence for each finding
+5. Write your response as a professional Markdown security audit report with clear headings and bullet points
 
 REPORT FORMAT:
 # Security Audit Report: {repo_name}
 
 ## Executive Summary
-(Brief overview of what was audited and top-level risk assessment)
+(Overview of scope and key risk areas identified)
 
 ## Findings
 
@@ -170,17 +167,17 @@ REPORT FORMAT:
 - **Line(s):** 42
 - **Category:** Injection / Secret Leak / etc.
 - **CWE:** CWE-XXX
-- **Description:** Clear explanation of the vulnerability
+- **Description:** Clear explanation of the issue
 - **Evidence:**
 ```python
 code snippet showing the issue
 ```
-- **Remediation:** How to fix it
+- **Remediation:** Recommended fix
 
 (Repeat for every finding)
 
 ## Recommendations
-(Summary of recommended actions)
+(Summary of prioritized remediation steps)
 """
 
     # Guard against oversized payload (~2 MB limit) — truncate files if needed
@@ -193,7 +190,7 @@ code snippet showing the issue
         for f in files[:MAX_FILES_PER_REPO]:
             content = f.get('content', '')
             file_contents += f"\n{'='*60}\nFILE: {f['path']}\n{'='*60}\n{content}\n"
-        prompt = f"""You are a paranoid elite security auditor. Perform an aggressive, deep-dive security audit of the following repository. Be thorough and suspicious — flag ANYTHING that could be a vulnerability, insecure pattern, or defense-in-depth gap.
+        prompt = f"""You are a professional application security engineer conducting a code review. Please review the following source files and produce a structured security assessment report.
 
 REPOSITORY: {repo_name}
 FILES ANALYZED: {len(files)}
@@ -205,20 +202,17 @@ SOURCE CODE:
 {file_contents}
 
 INSTRUCTIONS:
-1. Analyze ALL provided files aggressively for security issues
-2. Report EVERY suspicious pattern, insecure default, missing validation, overly broad permission, hardcoded value, weak crypto, unsafe deserialization, unsafe eval/exec, user input used unsafely, missing auth checks, verbose error messages, sensitive data in logs, SSRF, open redirects, path traversal, race conditions, TOCTOU, injection flaws, and buffer overflows
-3. For each finding, provide exact file path, line numbers, severity, category, CWE ID, description, evidence code snippet, and remediation
-4. If a file handles user input, network data, file paths, or credentials and lacks validation — FLAG IT
-5. If a function uses eval/exec/subprocess/shell with variable input — FLAG IT
-6. If secrets, tokens, passwords, or keys appear hardcoded or in config files — FLAG IT
-7. Do NOT ignore issues just because they seem "minor" — report them with appropriate severity
-8. Write your response as a professional Markdown security audit report. Use headings, bullet points, and code blocks. Do NOT wrap your entire response in JSON.
+1. Review the provided source files for potential security weaknesses
+2. Identify issues such as: missing input validation, hardcoded credentials, unsafe use of eval/exec, SQL injection risks, XSS risks, insecure cryptographic practices, verbose error handling, path traversal risks, SSRF risks, missing authentication checks, and insecure deserialization
+3. For each issue found, document: file path, line numbers, severity level (Critical/High/Medium/Low/Info), category, CWE identifier, description, evidence from the code, and recommended remediation
+4. Include code snippets as evidence for each finding
+5. Write your response as a professional Markdown security audit report with clear headings and bullet points
 
 REPORT FORMAT:
 # Security Audit Report: {repo_name}
 
 ## Executive Summary
-(Brief overview of what was audited and top-level risk assessment)
+(Overview of scope and key risk areas identified)
 
 ## Findings
 
@@ -227,17 +221,17 @@ REPORT FORMAT:
 - **Line(s):** 42
 - **Category:** Injection / Secret Leak / etc.
 - **CWE:** CWE-XXX
-- **Description:** Clear explanation of the vulnerability
+- **Description:** Clear explanation of the issue
 - **Evidence:**
 ```python
 code snippet showing the issue
 ```
-- **Remediation:** How to fix it
+- **Remediation:** Recommended fix
 
 (Repeat for every finding)
 
 ## Recommendations
-(Summary of recommended actions)
+(Summary of prioritized remediation steps)
 """
 
     return prompt
