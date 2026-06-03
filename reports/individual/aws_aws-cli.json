@@ -1,17 +1,19 @@
 {
-  "audit_timestamp": "2026-06-03T10:35:56Z",
-  "files_analyzed": 50,
+  "audit_timestamp": "2026-06-03T11:10:16Z",
+  "error": "cannot access local variable 'prompt' where it is not associated with a value",
+  "files_analyzed": 0,
   "findings": [],
+  "raw_report": "",
   "repo": "aws/aws-cli",
-  "repo_id": "7fd547eab53a",
+  "repo_id": "",
   "summary": {
     "critical_count": 0,
-    "duration_seconds": 268.59,
+    "duration_seconds": 0,
     "high_count": 0,
     "info_count": 0,
     "low_count": 0,
     "medium_count": 0,
-    "total_files": 50,
+    "total_files": 0,
     "total_findings": 0
   }
 }

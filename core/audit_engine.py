@@ -136,17 +136,6 @@ def create_audit_prompt(files: List[Dict], repo_name: str, repo_metadata: Dict) 
         content = f.get('content', '')
         file_contents += f"\n{'='*60}\nFILE: {f['path']}\n{'='*60}\n{content}\n"
 
-    # Guard against oversized payload (~2 MB limit)
-    MAX_PAYLOAD_BYTES = 1_800_000
-    while len(prompt.encode("utf-8")) > MAX_PAYLOAD_BYTES:
-        files = files[:len(files)//2]
-        file_tree = "\n".join([f"  {i+1}. {f['path']} ({f.get('lines', '?')} lines)"
-                              for i, f in enumerate(files[:MAX_FILES_PER_REPO])])
-        file_contents = ""
-        for f in files[:MAX_FILES_PER_REPO]:
-            content = f.get('content', '')
-            file_contents += f"\n{'='*60}\nFILE: {f['path']}\n{'='*60}\n{content}\n"
-
     prompt = f"""You are a paranoid elite security auditor. Perform an aggressive, deep-dive security audit of the following repository. Be thorough and suspicious — flag ANYTHING that could be a vulnerability, insecure pattern, or defense-in-depth gap.
 
 REPOSITORY: {repo_name}
@@ -193,6 +182,64 @@ code snippet showing the issue
 ## Recommendations
 (Summary of recommended actions)
 """
+
+    # Guard against oversized payload (~2 MB limit) — truncate files if needed
+    MAX_PAYLOAD_BYTES = 1_800_000
+    while len(prompt.encode("utf-8")) > MAX_PAYLOAD_BYTES and len(files) > 10:
+        files = files[:len(files)//2]
+        file_tree = "\n".join([f"  {i+1}. {f['path']} ({f.get('lines', '?')} lines)"
+                              for i, f in enumerate(files[:MAX_FILES_PER_REPO])])
+        file_contents = ""
+        for f in files[:MAX_FILES_PER_REPO]:
+            content = f.get('content', '')
+            file_contents += f"\n{'='*60}\nFILE: {f['path']}\n{'='*60}\n{content}\n"
+        prompt = f"""You are a paranoid elite security auditor. Perform an aggressive, deep-dive security audit of the following repository. Be thorough and suspicious — flag ANYTHING that could be a vulnerability, insecure pattern, or defense-in-depth gap.
+
+REPOSITORY: {repo_name}
+FILES ANALYZED: {len(files)}
+
+FILE TREE:
+{file_tree}
+
+SOURCE CODE:
+{file_contents}
+
+INSTRUCTIONS:
+1. Analyze ALL provided files aggressively for security issues
+2. Report EVERY suspicious pattern, insecure default, missing validation, overly broad permission, hardcoded value, weak crypto, unsafe deserialization, unsafe eval/exec, user input used unsafely, missing auth checks, verbose error messages, sensitive data in logs, SSRF, open redirects, path traversal, race conditions, TOCTOU, injection flaws, and buffer overflows
+3. For each finding, provide exact file path, line numbers, severity, category, CWE ID, description, evidence code snippet, and remediation
+4. If a file handles user input, network data, file paths, or credentials and lacks validation — FLAG IT
+5. If a function uses eval/exec/subprocess/shell with variable input — FLAG IT
+6. If secrets, tokens, passwords, or keys appear hardcoded or in config files — FLAG IT
+7. Do NOT ignore issues just because they seem "minor" — report them with appropriate severity
+8. Write your response as a professional Markdown security audit report. Use headings, bullet points, and code blocks. Do NOT wrap your entire response in JSON.
+
+REPORT FORMAT:
+# Security Audit Report: {repo_name}
+
+## Executive Summary
+(Brief overview of what was audited and top-level risk assessment)
+
+## Findings
+
+### [SEVERITY] Finding Title
+- **File:** `path/to/file`
+- **Line(s):** 42
+- **Category:** Injection / Secret Leak / etc.
+- **CWE:** CWE-XXX
+- **Description:** Clear explanation of the vulnerability
+- **Evidence:**
+```python
+code snippet showing the issue
+```
+- **Remediation:** How to fix it
+
+(Repeat for every finding)
+
+## Recommendations
+(Summary of recommended actions)
+"""
+
     return prompt
 
 
