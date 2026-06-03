@@ -62,16 +62,9 @@ def call_kimi_api(prompt: str, model: str = None, max_retries: int = MAX_RETRIES
 
     api_key = _get_api_key()
 
-    system_msg = (
-        "You are an elite security vulnerability researcher with 20+ years of experience. "
-        "You specialize in finding security flaws in open-source software. "
-        "Respond with a detailed Markdown security audit report."
-    )
-
     payload = {
         "model": model,
         "max_tokens": KIMI_MAX_TOKENS,
-        "system": system_msg,
         "messages": [
             {"role": "user", "content": prompt},
         ],
